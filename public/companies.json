@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CGI",
+        "webpage": "http://www.cgi.se",
+        "city": "Borlänge",
+        "freejobs": "22",
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/cgi.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.432207584381104,
+          60.48487325073576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Headlight",
+        "webpage": "http://www.headlight.se",
+        "city": "Borlänge",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/headlight.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.411103963851927,
+          60.48364961200173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Knowit",
+        "webpage": "https://www.knowit.se",
+        "city": "Borlänge",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/knowit.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.413695,
+          60.486725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Xlent",
+        "webpage": "http://www.xlent.se",
+        "city": "Borlänge",
+        "freejobs": 12,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/xlent.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.434197783470154,
+          60.48848311244656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atea",
+        "webpage": "http://www.atea.se",
+        "city": "Borlänge",
+        "freejobs": 33,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/atea.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.440104007720947,
+          60.4795449315971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Panang",
+        "webpage": "http://www.panang.se",
+        "city": "Falun",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/panang.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.625369548797606,
+          60.61181669335601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tension",
+        "webpage": "https://www.tension.se",
+        "city": "Falun",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/tension.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.631935596466063,
+          60.610858467687336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nethouse",
+        "webpage": "http://www.nethouse.se",
+        "city": "Borlänge",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/nethouse.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.434766411781311,
+          60.48749215820792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IT System Dalarna",
+        "webpage": "http://www.itsystem.se",
+        "city": "Leksand",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/itsystem.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.995492994785307,
+          60.73352810768121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Triatech",
+        "webpage": "http://www.triatech.se",
+        "city": "Borlänge",
+        "freejobs": 0,
+        "image": "http://users.du.se/~h17erial/IK1064/imgleaflet/triatech.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.401544570922852,
+          60.47221706366442
+        ]
+      }
+    }
+  ]
+}

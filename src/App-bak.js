@@ -1,28 +1,17 @@
-// TODO Gör klart komponeneter, med miniumum krav för funktion design
+//TODO Lägg till trafikrobot API för att visa resor
+//TODO Kommentera koden på svenska
+//TODO Hitta en server för att hosta applikationen
+//TODO Komenter koden på svenska
+//TODO Skriv kod för att göra en generell zoom om location inte är i Dalarna
+//TODO Resrobot: När positionen ändras, ändras inte platsen för närmast hållplats
+//TODO Resrobot: Stolptider, det ska gå att se busstider till de olika företagen
+//TODO .map ger ett fel medelande när indet ett unik id används för ietterationern
+//TODO det fattas ett företag
+//TODO Nästa buss är hårdkodat med ett ID, byta det till IDet som returneras av resrobot
+//TODO Det blir färre och färre nyheter
 
-//TODO PopupUser: Next buss komponenten fungerar ej i egen koponent
-//TODO PupupUser Extra: Byt markör. När positionen ändras, ändras inte platsen för närmast hållplats.
-//TODO PupupUser Extra: Zooma när vi har användarens location. Om användarens location är utanför dalarna visa en generell zoom över dalarna
-
-// TODO PopupCompany: Text Design, Ta bort muspekare på bilder.
-// TODO Extra PopupCompany: Knapp som visar bussar till företaget från användaarens position
-
-//TODO Design: Footer, Div struktur
-//TODO Design extra: Titta på liknande sidor för inspiration
-
-// TODO Kommentera koden på svenska
-// TODO Ta bort de states, komponenter och kod som inte används
-// TODO Presentation: JSX, Web Pack, Komponenter, React Lifecyckel
-
-//TODO Hosting: Starta ett nytt projekt med git, där endast de filerna / webpack som används är med
-//TODO Hosting: Hitta en server för att hosta applikationen
-
-//TODO OLD: Dessa todo är gammla och antagligen omskrivna ovan
-//TODO OLD: Lägg till trafikrobot API för att visa resor
-//TODO OLD: Skriv kod för att göra en generell zoom om location inte är i Dalarna
-//TODO OLD: Resrobot: När positionen ändras, ändras inte platsen för närmast hållplats
-//TODO OLD: Resrobot: Stolptider, det ska gå att se busstider till de olika företagen
-//TODO OLD: Nästa buss är hårdkodat med ett ID, byta det till IDet som returneras av resrobot
+// Refactor
+//TODO Skapa mindre componenter med hjälpfunktioner för att skicka dtat (getters/setters) t.ex. CompanyPopups
 
 // heroku login
 // h17erial@du.se
@@ -35,16 +24,14 @@ import './App.css';
 import Header from './Header';
 import {Footer} from './Footer';
 import NextBuss from './componenets/NextBuss';
-import PopupUser from './componenets/PopupUser';
+import PopupUser from './componenets/UserLocation';
 import CompaniesLocation from './CompaniesLocation';
 import PopupCompany from './componenets/PopupCompany';
-import News from './componenets/News'
 
 //Images
 import logo from './img/originals/atea.png';
 
 import cgi from './img/cgi.jpg';
-import PropTypes from "prop-types";
 
 //Fix for bug in leaflet-react, code below replace the broken link that has some extra code in the end.
 delete L.Icon.Default.prototype._getIconUrl;
@@ -104,13 +91,7 @@ class App extends Component {
 	setLocation() {
 		window.navigator.geolocation.getCurrentPosition((success) => {
 			this.setState({
-
-				//Varför vill vi sätta båda? Location skall bara ändras om den är i dalarna
 				location: {
-					lat: success.coords.latitude,
-					lng: success.coords.longitude
-				},
-				userLocation: {
 					lat: success.coords.latitude,
 					lng: success.coords.longitude
 				},
@@ -161,8 +142,8 @@ class App extends Component {
 						name: (this.state.companies[i].properties.name),
 						webpage: this.state.companies[i].properties.webpage,
 						city: this.state.companies[i].properties.city,
-						lat: this.state.companies[i].geometry.coordinates[1],
-						lng: this.state.companies[i].geometry.coordinates[0],
+						lat: this.state.companies[i].geometry.coordinates[0],
+						lng: this.state.companies[i].geometry.coordinates[1],
 						image: this.state.companies[i].properties.image,
 						id: (this.state.jobs[j].id),
 						// city_jobs: this.state.jobs[j].namn,
@@ -336,6 +317,15 @@ class App extends Component {
 
 	}
 
+
+
+
+
+
+
+
+
+
 	componentDidMount() {
 		this.setLocation();
 		this.getYourNearestStation();
@@ -347,10 +337,7 @@ class App extends Component {
 
 	render() {
 		const position = [this.state.location.lat, this.state.location.lng];
-
-		console.log("Printing position from render()");
 		console.log(position);
-		console.log(position[0]);
 
 		return <div className="MainDiv">
 
@@ -371,24 +358,71 @@ class App extends Component {
 				           openWeather={this.state.openWeather}
 				           resRobot={this.state.resRobot}
 				           haveOpenWeather={this.state.haveOpenWeather}
-				           haveResRobot={this.state.haveResRobot}
-				           travelData={this.state.travelData}
-				           haveTravelData={this.state.haveTravelData}/>
+				           haveResRobot={this.state.haveResRobot}/>
+
+
+				{/*{this.state.haveUsersLocation ?*/}
+				{/*	<CircleMarker center={[this.state.location.lat, this.state.location.lng]} fillColor="red"*/}
+				{/*	              color="gray" radius={15}>*/}
+				{/*		{this.state.haveOpenWeather && this.state.haveTravelData && this.state.haveResRobot ?*/}
+				{/*			<Popup>*/}
+				{/*				<strong>Trafik</strong><br/>*/}
+				{/*				Your nearest station is: <br/>*/}
+				{/*				{this.state.userBusStop} <br/>*/}
+				{/*				<br/>*/}
+				{/*				<strong>Weather</strong> <br/>*/}
+				{/*				temp: {this.state.openWeather.main.temp} <br/>*/}
+				{/*				weather: {this.state.openWeather.weather[0].description}<br/>*/}
+				{/*			</Popup>*/}
+				{/*			: ''*/}
+				{/*		}*/}
+				{/*	</CircleMarker>*/}
+				{/*	: ''*/}
+				{/*}*/}
+
+
+				{/*Loopar igenom state.companies om state.companies = true*/}
+
+
+				{/*<CompaniesLocation*/}
+				{/*	haveAllAPIs={this.state.haveAllAPIs}*/}
+				{/*	AllAPIs={this.state.allAPIs}*/}
+				{/*	userBusStopID={this.state.resRobot}*/}
+				{/*/>*/}
 
 
 				{this.state.haveAllAPIs ?
 					<LayersControl>
 						{this.state.allAPIs.map((key, i) => {
 							return <Marker
-								position={[this.state.allAPIs[i].lat, this.state.allAPIs[i].lng]}>
+								position={[this.state.allAPIs[i].lng, this.state.allAPIs[i].lat]}>
+
 
 								<PopupCompany AllAPIs={this.state.allAPIs[i]}
-								              userLat={this.state.userLocation.lat}
-								              userLng={this.state.userLocation.lng}
-								              companyLat={this.state.allAPIs[i].lat}
-								              companyLng={this.state.allAPIs[i].lng}
-								              haveUserLocation={this.state.haveUsersLocation}
+
 								/>
+
+
+								{/*<Popup>*/}
+								{/*	<div className="popupDiv">*/}
+								{/*		<img src={this.state.allAPIs[i].image} className="popupImage"/>*/}
+
+								{/*		{this.state.allAPIs[i].name} <br/>*/}
+								{/*		<a href={this.state.allAPIs[i].webpage}> {this.state.allAPIs[i].webpage} </a>*/}
+								{/*		<p>Lediga jobb*/}
+								{/*			i {this.state.allAPIs[i].city}: {this.state.allAPIs[i].ledigajobb} ({this.state.allAPIs[i].platsannonser} annonser)</p>*/}
+								{/*		<button onClick={this.getNextBus(this.state.userBusStopID, this.state.userBusStopID)}>*/}
+								{/*			Nästa buss*/}
+								{/*		</button>*/}
+								{/*		<Footer*/}
+								{/*			name={this.state.busStopName}*/}
+								{/*			time={this.state.busDeptTime}*/}
+								{/*			destination={this.state.busStopDirection}*/}
+								{/*		/>*/}
+								{/*	</div>*/}
+								{/*</Popup>*/}
+
+
 
 							</Marker>
 						})}
@@ -396,11 +430,27 @@ class App extends Component {
 					: ''
 				}
 
-			</Map>
 
-			<News haveScienceNews={this.state.haveScienceNews}
-			      scienceNews={this.state.scienceNews.articles}
-			/>
+
+
+
+			</Map>
+			{this.state.haveScienceNews ?
+				<div>
+					{this.state.scienceNews.articles.map((key, i) => {
+						return <span>
+								{/*<p>{this.state.scienceNews.articles[i].author}</p>*/}
+							{/*<p>{this.state.scienceNews.articles[i].content}</p>*/}
+
+							<span>{this.state.scienceNews.articles[i].title} <a
+								href={this.state.scienceNews.articles[i].url}> Läs mer </a></span><br/>
+							</span>
+					})}
+				</div>
+				: ''
+			}
+
+
 		</div>
 			;
 	}
