@@ -1,0 +1,23 @@
+.FooterDiv{
+    width: 100%;
+    height: auto;
+    display: grid;
+    position: relative;
+}
+
+.NewsDiv{
+    background-color: rgba(114, 192, 114, 0.06);
+    text-align: left;
+    padding: 8px;
+    /*width: auto;*/
+ }
+
+.Header{
+    margin-bottom: 7px;
+    margin-top: 5px;
+
+}
+
+.SmallHeaderUnderMap{
+    height: 30px;
+}

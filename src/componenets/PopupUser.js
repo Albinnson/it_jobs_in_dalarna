@@ -60,11 +60,6 @@ export default class PopupUser extends React.Component {
 								<strong>Weather</strong> <br/>
 								temp: {this.props.openWeather.main.temp} <br/>
 								weather: {this.props.openWeather.weather[0].description}<br/>
-								<p>
-									<button onClick={this.getNextBus(this.props.userBusStopID, this.props.userBusStopID)}>Next
-										buss
-									</button>
-								</p>
 							</Popup>
 							: ''
 						}

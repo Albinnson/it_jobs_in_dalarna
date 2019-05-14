@@ -1,5 +1,8 @@
-.popupImageDiv {
+.popupCompanyImageDiv {
     display: flex;
     justifyContent: center;
+}
+.popupCompanyDiv{
+
 }
 

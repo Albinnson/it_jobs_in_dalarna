@@ -1,0 +1,36 @@
+.LogoText{
+
+    margin-left: 3px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    vertical-align: middle;
+    color: #3498db;
+}
+.LogoText2{
+
+    font-family: 'Signika', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    vertical-align: middle;
+    color: #3498db;
+}
+
+.HeaderDiv {
+    text-align: left;
+    background-color: #f7fbf7;
+    padding: 8px;
+}
+.HeaderInnerDiv {
+    display: inline-block;
+    vertical-align: middle;
+}
+.LogoImg{
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: auto;
+    vertical-align: middle;
+
+}
+

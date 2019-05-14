@@ -127,23 +127,17 @@ export default class CompaniesLocation extends React.Component {
 	render() {
 		return (
 			<Popup>
-				<div>
-					<div className="popupImageDiv">
+				<div className="popupCompanyDiv">
+					<div className="popupCompanyImageDiv">
 						{CompaniesLocation.getImageByCompanyName(this.props.AllAPIs.name, this.props.AllAPIs.webpage)}
 					</div>
 
-					<p>Name: {this.props.AllAPIs.name}</p>
-					<p>Webpage: {this.props.AllAPIs.webpage}</p>
-					<p>Image: {this.props.AllAPIs.image}</p>
-					<p>Leadiga Jobb: {this.props.AllAPIs.ledigajobb}</p>
-					<p>Leadiga Jobb: {this.props.AllAPIs.city}</p>
-					<p>Leadiga Jobb: {this.props.AllAPIs.platsannonser}</p>
+					{/*<p>Name: {this.props.AllAPIs.name}</p>*/}
+					{/*<p>Webpage: {this.props.AllAPIs.webpage}</p>*/}
 
-					<p>userLat {this.props.userLat}</p>
-					<p>userLng {this.props.userLng}</p>
-					<p>companyLat {this.props.companyLat}</p>
-					<p>companyLng {this.props.companyLng}</p>
-
+					<span><strong>Leadiga Jobb i {this.props.AllAPIs.city}</strong></span><br/>
+					<span>{this.props.AllAPIs.platsannonser} platsannonser</span><br/>
+					<span>{this.props.AllAPIs.ledigajobb} jobb</span><br/>
 
 					<button
 						onClick={() => {

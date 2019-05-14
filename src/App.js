@@ -32,13 +32,13 @@ import React, {Component} from 'react';
 import {Map, TileLayer, Marker, Popup, LayersControl, CircleMarker} from 'react-leaflet';
 import L from 'leaflet';
 import './App.css';
-import Header from './Header';
 import {Footer} from './Footer';
 import NextBuss from './componenets/NextBuss';
 import PopupUser from './componenets/PopupUser';
 import CompaniesLocation from './CompaniesLocation';
 import PopupCompany from './componenets/PopupCompany';
 import News from './componenets/News'
+import Header from './componenets/Header'
 
 //Images
 import logo from './img/originals/atea.png';
@@ -354,9 +354,9 @@ class App extends Component {
 
 		return <div className="MainDiv">
 
-			<NextBuss haveTravelData={this.state.haveTravelData}
-			          travelPlan={this.state.travelData}
-			/>
+			{/*<NextBuss haveTravelData={this.state.haveTravelData}*/}
+			{/*          travelPlan={this.state.travelData}*/}
+			{/*/>*/}
 			<Header/>
 
 			<Map className="map"

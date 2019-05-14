@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald');
+
+
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Catamaran|Signika');
+/*font-family: 'Signika', sans-serif;*/
+/*font-family: 'Catamaran', sans-serif;*/
+/*font-family: 'Cantarell', sans-serif;*/
+
+body {
+    /*font-family: 'Roboto', serif;*/
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Oswald', sans-serif;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 .map{
   height: 600px;
 }
@@ -5,9 +30,8 @@
 width:  200px
 }
 .MainDiv {
-  margin: 10px;
+  /*margin: 10px;*/
   text-align: center;
-  background-color: seashell;
 }
 .popupDiv{
   width:  240px
