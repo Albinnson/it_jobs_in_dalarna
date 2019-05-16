@@ -9,6 +9,8 @@
 body {
     /*font-family: 'Roboto', serif;*/
     font-family: 'Open Sans', sans-serif;
+    background-color: rgba(114, 192, 114, 0.06);
+
     /*font-family: 'Oswald', sans-serif;*/
 }
 
@@ -39,4 +41,35 @@ width:  200px
 
 .popupImage{
   width:  200px
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+
+}
+.column2 {
+    float: left;
+    width: 50%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    background-color: rgba(114, 192, 114, 0.06);
+
+    content: "";
+    display: grid;
+    /*clear: both;*/
+}
+
+@media screen and (max-width: 1250px) {
+    .partners {
+        display: none;
+    }
+    .column1 {
+        width: 100%;
+
+    }
+
 }

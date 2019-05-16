@@ -45,7 +45,7 @@ import News from './componenets/News'
 import Header from './componenets/Header'
 
 //Images
-import logo from './img/originals/atea.png';
+import Partners from './img/partners.png';
 
 import cgi from './img/cgi.jpg';
 import PropTypes from "prop-types";
@@ -402,9 +402,21 @@ class App extends Component {
 
 			</Map>
 
-			<News haveScienceNews={this.state.haveScienceNews}
-			      scienceNews={this.state.scienceNews.articles}
-			/>
+
+			<div className="row">
+				<div className="column1"><News haveScienceNews={this.state.haveScienceNews}
+				                              scienceNews={this.state.scienceNews.articles}
+				/>
+				</div>
+
+
+
+				<div className="column2 partners">
+					<h3 className="column">Våra sammarbets Partners</h3>
+					<img src={Partners} width='500px'/>
+				</div>
+			</div>
+
 		</div>
 			;
 	}

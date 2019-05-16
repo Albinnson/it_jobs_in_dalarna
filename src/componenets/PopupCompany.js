@@ -13,6 +13,7 @@ import Tension from '../img/tension.jpg';
 import Nethouse from '../img/nethouse.jpg';
 import ITSystem from '../img/itsystem.jpg';
 import Triatech from '../img/triatech.jpg';
+import Spinner from '../img/spinner.svg'
 
 export default class CompaniesLocation extends React.Component {
 	state = {
@@ -33,6 +34,7 @@ export default class CompaniesLocation extends React.Component {
 			name: "",
 			isSet: false,
 		},
+		defaultPopup: true,
 	};
 
 	static getImageByCompanyName(param, link) {
@@ -132,30 +134,59 @@ export default class CompaniesLocation extends React.Component {
 						{CompaniesLocation.getImageByCompanyName(this.props.AllAPIs.name, this.props.AllAPIs.webpage)}
 					</div>
 
-					{/*<p>Name: {this.props.AllAPIs.name}</p>*/}
-					{/*<p>Webpage: {this.props.AllAPIs.webpage}</p>*/}
+					{this.state.defaultPopup ?
+						<div className="CompanyDiv">
 
-					<span><strong>Leadiga Jobb i {this.props.AllAPIs.city}</strong></span><br/>
-					<span>{this.props.AllAPIs.platsannonser} platsannonser</span><br/>
-					<span>{this.props.AllAPIs.ledigajobb} jobb</span><br/>
+							<span><strong>Leadiga Jobb i {this.props.AllAPIs.city}</strong></span><br/>
+							<span>{this.props.AllAPIs.platsannonser} platsannonser</span><br/>
+							<span>{this.props.AllAPIs.ledigajobb} jobb</span><br/>
 
-					<button
+
+						</div>
+						:
+						<div className="BussDiv">
+
+
+							<div>
+								{this.state.userStop.isSet && this.state.companyStop.isSet && !this.state.trip.isSet ?
+									this.getTrip()
+									: ''
+								}
+							</div>
+							<div>
+								{this.state.trip.isSet ?
+									<div>
+										<span><strong>{this.state.trip.name}</strong></span><br/>
+										{/*<p>{this.state.trip.name}</p>*/}
+										<span>Start: {this.state.trip.startTime} <br/>{this.state.trip.start} </span><br/><br/>
+										<span>Stop: {this.state.trip.stopTime} <br/>{this.state.trip.stop}</span>
+									</div> :
+									<div className="SpinnerDiv">
+									<img src={Spinner} width={'120px'}/>
+									</div>
+								}
+							</div>
+
+						</div>
+
+					}
+
+
+					<button className="button"
 						onClick={() => {
 							this.getBussFromUserLocation(this.props.userLat, this.props.userLng, this.props.companyLat, this.props.companyLng)
-						}}>Next
-						buss
-					</button>
-					<div>{this.state.userStop.isSet && this.state.companyStop.isSet && !this.state.trip.isSet ?
-						this.getTrip() : ''}</div>
+							this.setState({defaultPopup: !this.state.defaultPopup})
 
-					<div>{this.state.trip.isSet ?
-						<div>
-							<p>{this.state.trip.name}</p>
-							<p>Start: {this.state.trip.startTime} <br/>{this.state.trip.start} </p>
-							<p>Stop: {this.state.trip.stopTime} <br/>{this.state.trip.stop}</p>
-						</div>: ''}</div>
+						}}>
+						{this.state.defaultPopup ?
+							'Next buss'
+							:
+							'Info'
+						}
+					</button>
 
 				</div>
+
 			</Popup>
 
 		)

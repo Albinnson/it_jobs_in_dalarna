@@ -2,7 +2,40 @@
     /*display: flex;*/
     justifyContent: center;
 }
-.popupCompanyDiv{
+
+.popupCompanyDiv {
+    min-height: 170px;
+    min-width: 145px;
+}
+.CompanyDiv{
+    margin-top: 5px;
+    min-height: 130px;
+    min-width: 145px;
+
 
 }
+.BussDiv{
+    margin-top: 5px;
+    min-height: 130px;
+    min-width: 145px;
+}
 
+.SpinnerDiv{
+    justifyContent: center;
+    alignItems: center,
+}
+
+.button {
+    background-color: #3498db;
+    border: 1px black;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+}
