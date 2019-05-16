@@ -39,25 +39,25 @@ export default class CompaniesLocation extends React.Component {
 		console.log(param);
 		switch (param) {
 			case 'Atea':
-				return <a href={link}> <img src={Atea} alt={'Link to Atea web page'}/></a>;
+				return <a href={link}> <img src={Atea} width={'133px'} alt={'Link to Atea web page'}/></a>;
 			case 'CGI':
-				return <a href={link}> <img src={CGI} alt={'Link to CGI web page'}/></a>;
+				return <a href={link}> <img src={CGI} width={'133px'} alt={'Link to CGI web page'}/></a>;
 			case 'Knowit':
-				return <a href={link}> <img src={Knowit} alt={'Link to Knowit web page'}/></a>;
+				return <a href={link}> <img src={Knowit} width={'133px'} alt={'Link to Knowit web page'}/></a>;
 			case 'Headlight':
-				return <a href={link}> <img src={Headlight} alt={'Link to Headlight web page'}/></a>;
+				return <a href={link}> <img src={Headlight} width={'133px'} alt={'Link to Headlight web page'}/></a>;
 			case 'Xlent':
-				return <a href={link}> <img src={Xlent} alt={'Link to Xlent web page'}/></a>;
+				return <a href={link}> <img src={Xlent} width={'133px'} alt={'Link to Xlent web page'}/></a>;
 			case 'Panang':
-				return <a href={link}> <img src={Panang} alt={'Link to Panang web page'}/></a>;
+				return <a href={link}> <img src={Panang} width={'133px'} alt={'Link to Panang web page'}/></a>;
 			case 'Tension':
-				return <a href={link}> <img src={Tension} alt={'Link to Tension web page'}/></a>;
+				return <a href={link}> <img src={Tension} width={'133px'} alt={'Link to Tension web page'}/></a>;
 			case 'Nethouse':
-				return <a href={link}> <img src={Nethouse} alt={'Link to NetHouse web page'}/></a>;
+				return <a href={link}> <img src={Nethouse} width={'133px'} alt={'Link to NetHouse web page'}/></a>;
 			case 'IT System Dalarna':
-				return <a href={link}> <img src={ITSystem} alt={'Link to IT System Dalarna web page'}/></a>;
+				return <a href={link}> <img src={ITSystem} width={'133px'} alt={'Link to IT System Dalarna web page'}/></a>;
 			case 'Triatech':
-				return <a href={link}> <img src={Triatech} alt={'Link to Tritech web page'}/></a>;
+				return <a href={link}> <img src={Triatech} width={'133px'} alt={'Link to Tritech web page'}/></a>;
 
 			default:
 				return '';

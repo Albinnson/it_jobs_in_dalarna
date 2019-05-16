@@ -1,3 +1,5 @@
+// TODO när popup öppnas första gången kommer bilderna utanför på heroku
+
 // TODO Gör klart komponeneter, med miniumum krav för funktion design
 
 //TODO PopupUser: Next buss komponenten fungerar ej i egen koponent
@@ -28,7 +30,9 @@
 // h17erial@du.se
 // -:4mDXKuStDs49M
 
+
 import React, {Component} from 'react';
+
 import {Map, TileLayer, Marker, Popup, LayersControl, CircleMarker} from 'react-leaflet';
 import L from 'leaflet';
 import './App.css';
