@@ -38,7 +38,6 @@ export default class CompaniesLocation extends React.Component {
 	};
 
 	static getImageByCompanyName(param, link) {
-		console.log(param);
 		switch (param) {
 			case 'Atea':
 				return <a href={link}> <img src={Atea} width={'133px'} alt={'Link to Atea web page'}/></a>;

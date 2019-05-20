@@ -30,7 +30,6 @@
 // h17erial@du.se
 // -:4mDXKuStDs49M
 
-
 import React, {Component} from 'react';
 
 import {Map, TileLayer, Marker, Popup, LayersControl, CircleMarker} from 'react-leaflet';
@@ -49,6 +48,7 @@ import Partners from './img/partners.png';
 
 import cgi from './img/cgi.jpg';
 import PropTypes from "prop-types";
+import {Col, Row} from "react-bootstrap";
 
 //Fix for bug in leaflet-react, code below replace the broken link that has some extra code in the end.
 delete L.Icon.Default.prototype._getIconUrl;
@@ -352,15 +352,8 @@ class App extends Component {
 	render() {
 		const position = [this.state.location.lat, this.state.location.lng];
 
-		console.log("Printing position from render()");
-		console.log(position);
-		console.log(position[0]);
-
 		return <div className="MainDiv">
 
-			{/*<NextBuss haveTravelData={this.state.haveTravelData}*/}
-			{/*          travelPlan={this.state.travelData}*/}
-			{/*/>*/}
 			<Header/>
 
 			<Map className="map"
@@ -403,22 +396,19 @@ class App extends Component {
 			</Map>
 
 
-			<div className="row">
-				<div className="column1"><News haveScienceNews={this.state.haveScienceNews}
-				                              scienceNews={this.state.scienceNews.articles}
+			<Row>
+				<Col><News haveScienceNews={this.state.haveScienceNews}
+				                               scienceNews={this.state.scienceNews.articles}
 				/>
-				</div>
-
-
-
-				<div className="column2 partners">
-					<h3 className="column">Våra sammarbets Partners</h3>
+				</Col>
+				<Col className="partners">
+					<h3>Våra sammarbets Partners</h3>
 					<img src={Partners} width='500px'/>
-				</div>
-			</div>
+				</Col>
+			</Row>
 
 		</div>
-			;
+		;
 	}
 }
 

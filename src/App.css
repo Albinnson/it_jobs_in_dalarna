@@ -46,11 +46,13 @@ width:  200px
 .column1 {
     float: left;
     width: 50%;
+    margin-left: 30px;
 
 }
 .column2 {
     float: left;
     width: 50%;
+
 
 }
 
